@@ -12,7 +12,8 @@ This guide has been tested with WMWare Fusion 8 on OS X 10.11.5 and macOS Sierra
     1. Serial
     2. MAC Adress
     3. MLB + ROM
-4. GO!
+4. Cleaning Up
+5. GO!
 
 ## 1. Requirements
 You will need a genuine OSX Copy freshly installed.
@@ -103,7 +104,25 @@ Add following to the .vmx file.
 
 Replace EEE with the ROM value and FFF with the MLB value, save and start your VM again.
 
-## 4. GO!
+## 4. Cleaning Up
+
+If you've already tried unsuccessfully to get iMessage working, it might help to clean some things up.
+
+Open a Terminal window and paste the following commands:
+
+```
+cd ~/Library/Caches/
+rm -r com.apple.{Messages,imfoundation}*
+
+cd ~/Library/Preferences/
+rm com.apple.i{Chat,message}*
+rm com.apple.im{agent,service}*
+
+rm -r ~/Library/Messages/
+
+```
+
+## 5. GO!
 
 Login with your AppleID in iMessage. You should be good to go.
 
